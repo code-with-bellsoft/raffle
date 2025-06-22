@@ -38,7 +38,7 @@
                 </os>
             </activation>
             <properties>
-                <openjfx.os.prefix>windows</openjfx.os.prefix>
+                <osname>windows</osname>
                 <jfxdownload.os.arch>x64</jfxdownload.os.arch>
             </properties>
         </profile>
@@ -51,7 +51,7 @@
                 </os>
             </activation>
             <properties>
-                <openjfx.os.prefix>linux</openjfx.os.prefix>
+                <osname>linux</osname>
                 <jfxdownload.os.arch>aarch64</jfxdownload.os.arch>
             </properties>
         </profile>
@@ -63,7 +63,7 @@
                 </os>
             </activation>
             <properties>
-                <openjfx.os.prefix>osx</openjfx.os.prefix>
+                <osname>osx</osname>
                 <jfxdownload.os.arch>aarch64</jfxdownload.os.arch>
             </properties>
         </profile>
@@ -72,10 +72,10 @@
             <id>fetch-javafx-sdk</id>
             <properties>
                 <openjfx.jmods.download.url>
-                    https://download2.gluonhq.com/openjfx/${openjfx.version}/openjfx-${openjfx.version}_${openjfx.os.prefix}-${jfxdownload.os.arch}_bin-jmods.zip
+                    https://download2.gluonhq.com/openjfx/${openjfx.version}/openjfx-${openjfx.version}_${osname}-${jfxdownload.os.arch}_bin-jmods.zip
                 </openjfx.jmods.download.url>
                 <openjfx.sdk.download.url>
-                    https://download2.gluonhq.com/openjfx/${openjfx.version}/openjfx-${openjfx.version}_${openjfx.os.prefix}-${jfxdownload.os.arch}_bin-sdk.zip
+                    https://download2.gluonhq.com/openjfx/${openjfx.version}/openjfx-${openjfx.version}_${osname}-${jfxdownload.os.arch}_bin-sdk.zip
                 </openjfx.sdk.download.url>
             </properties>
 
@@ -140,7 +140,7 @@
                             <outputDirectory>target/native</outputDirectory>
                             <mainClass>dev.cat.RaffleApplication</mainClass>
                             <buildArgs>
-                                <buildArg>-H:ConfigurationFileDirectories=native-config/</buildArg>
+                                <buildArg>-H:ConfigurationFileDirectories=native-config/${osname}/</buildArg>
                             </buildArgs>
                         </configuration>
                     </plugin>
