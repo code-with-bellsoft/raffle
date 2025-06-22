@@ -1224,6 +1224,9 @@
       "glob": "graphics/maximize.png"
     },
     {
+      "glob": "graphics/minimize.png"
+    },
+    {
       "glob": "graphics/exit.png"
     },
     {
