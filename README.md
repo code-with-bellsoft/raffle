@@ -5,13 +5,13 @@ If the participant in present, they are congratulated.
 If not, the name is removed from the list, which gets shuffled again to choose another name.
 
 There's an option of masking emails: in this case, only the part before the at sign will be displayed on the screen.
+
 Example:
 john.doe*****
 
-
 ## Building
 
-This project assumes you are using a graalvm JDK. Such a JDK can be downloaded via http://www.graalvm.org/ or via SDK man (https://www.sdkman.io)
+This project assumes you are using a Graalvm JDK. Such a JDK can be downloaded via http://www.graalvm.org/ or via SDK man (https://www.sdkman.io)
 
     sdk install java 24.0.1-graalce
 
@@ -53,4 +53,6 @@ The app will need various javafx libraries, which are copied from the SDK. This 
     at org.graalvm.nativeimage.builder/com.oracle.svm.core.thread.PlatformThreads.threadStartRoutine(PlatformThreads.java:832)
     at org.graalvm.nativeimage.builder/com.oracle.svm.core.thread.PlatformThreads.threadStartRoutine(PlatformThreads.java:808)
     
-Currently the app only works on Linux! On Mac the app won't show the User Interface.
+Currently the app only works on Linux! On OsX the app won't show the main application window :/, untested on windows.
+
+Note: Not all files from the sdk are needed to run the application - for example libjfxwebkit.so can be removed, as well as many other files. 
